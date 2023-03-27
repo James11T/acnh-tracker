@@ -25,7 +25,7 @@ import {
 } from "@mui/material";
 import { BugReport, Phishing, ViewCompact, Waves } from "@mui/icons-material";
 import Calendar from "../calendar/Calendar";
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import { Routes, Route, Link, useLocation, Navigate } from "react-router-dom";
 import CreatureList from "../creatureList/CreatureList";
 import Critterpedia from "../critterpedia/Critterpedia";
 
@@ -182,6 +182,7 @@ const App = () => {
         <Toolbar />
         <Container>
           <Routes>
+            <Route path="/" element={<Navigate to="/fish" replace={true} />} />
             <Route
               path="/fish"
               element={
