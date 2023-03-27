@@ -1,0 +1,31 @@
+$size: 80px;
+$border: 1px solid rgba(0, 0, 0, 5%);
+
+.critterpedia {
+  &__category {
+    display: flex;
+    flex-wrap: wrap;
+    border-left: $border;
+  }
+
+  &__tile {
+    width: $size;
+    height: $size;
+    border-top: $border;
+    border-right: $border;
+    border-bottom: $border;
+    padding: 4px;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.hidden {
+  filter: brightness(0.1);
+}

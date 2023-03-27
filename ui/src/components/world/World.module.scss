@@ -1,0 +1,15 @@
+.world {
+  position: relative;
+
+  img {
+    display: block;
+    height: 2.5em;
+  }
+
+  &__north,
+  &__south {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

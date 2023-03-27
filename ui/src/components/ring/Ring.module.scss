@@ -1,0 +1,15 @@
+.ring {
+  height: 100%;
+
+  path {
+    transform-origin: center;
+  }
+
+  .path {
+    stroke: rgb(176, 221, 186);
+  }
+
+  .background-path {
+    stroke: rgb(223, 223, 223);
+  }
+}

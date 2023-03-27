@@ -1,0 +1,51 @@
+$calendar-cell-size: 30px;
+
+.calendar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, $calendar-cell-size);
+  border: 1px solid rgb(233, 233, 233);
+  border-top-width: 8px;
+  border-radius: 4px;
+  height: fit-content;
+
+  button {
+    all: unset;
+    min-width: $calendar-cell-size;
+    width: 100%;
+    height: $calendar-cell-size;
+    font-size: 12px;
+    display: grid;
+    place-content: center;
+    background-color: white;
+    cursor: pointer;
+    user-select: none;
+
+    &:disabled {
+      cursor: auto;
+    }
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: rgba(0, 0, 0, 5%);
+      }
+    }
+
+    &:nth-child(12) {
+      border-bottom-right-radius: 3px;
+    }
+
+    &:nth-child(9) {
+      border-bottom-left-radius: 3px;
+    }
+
+    &.active {
+      background-color: rgb(176, 221, 186);
+    }
+
+    &.current {
+      box-shadow: 0 0 0 2px rgba(124, 124, 187, 30%) inset;
+    }
+  }
+}
