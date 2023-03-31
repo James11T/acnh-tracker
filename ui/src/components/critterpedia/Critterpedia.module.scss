@@ -27,5 +27,5 @@ $border: 1px solid rgba(0, 0, 0, 5%);
 }
 
 .hidden {
-  filter: brightness(0.1);
+  filter: contrast(0) brightness(0.4);
 }

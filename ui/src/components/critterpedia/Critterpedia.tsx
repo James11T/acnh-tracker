@@ -3,7 +3,7 @@ import styles from "./Critterpedia.module.scss";
 import cn from "clsx";
 import { Creature } from "../../types";
 import useFoundState from "../../hooks/useFoundState";
-import { Divider, Stack, Tooltip, Typography } from "@mui/material";
+import { Stack, Tooltip, Typography } from "@mui/material";
 
 interface CritterpediaPageProps {
   creatures: Creature[];
@@ -15,6 +15,7 @@ const CritterpediaPage = ({ creatures, title }: CritterpediaPageProps) => {
 
   return (
     <div>
+      {[...new Set(fishes.map((fish) => fish.location))].join(", ")}
       <Typography variant="h5" component="h3">
         {title}
       </Typography>
@@ -30,7 +31,7 @@ const CritterpediaPage = ({ creatures, title }: CritterpediaPageProps) => {
               <div
                 className={styles["critterpedia__image"]}
                 style={{
-                  backgroundImage: `url(${creature.critterpedia_image})`,
+                  backgroundImage: `url(${creature.image})`,
                 }}
               ></div>
             </div>

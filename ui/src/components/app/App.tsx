@@ -168,10 +168,7 @@ const App = () => {
             <ListItem>
               <Calendar
                 onMonthClick={(month) => {
-                  const now = new Date();
-                  gameState.setTime(
-                    new Date(`${now.getDate()} ${month} ${now.getFullYear()}`)
-                  );
+                  gameState.setTime(new Date(`1 ${month} 1970`));
                 }}
               />
             </ListItem>

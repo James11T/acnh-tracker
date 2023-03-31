@@ -25,6 +25,8 @@
   &__image {
     height: 120px;
     width: 120px;
+
+    object-fit: contain;
   }
 
   &__icon {
